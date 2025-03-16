@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Kelson/Documents/Projects/cpp_template/libraries/profiler
+# Install script for directory: C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

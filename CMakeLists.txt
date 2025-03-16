@@ -17,6 +17,7 @@ add_subdirectory(libraries/fmt)
 add_subdirectory(libraries/traceSystem)
 add_subdirectory(libraries/crashHandler)
 add_subdirectory(libraries/profiler)
+add_subdirectory(libraries/timeManager)
 
 file(GLOB_RECURSE PROJECT_SOURCES
     src/*.cpp
@@ -27,11 +28,13 @@ file(GLOB_RECURSE PROJECT_SOURCES
 
 add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
 
-include_directories(src/
+include_directories(
+    include/
     SYSTEM libraries/fmt/include
     SYSTEM libraries/traceSystem/include
     SYSTEM libraries/crashHandler/include
     SYSTEM libraries/profiler/include
+    SYSTEM libraries/timeManager/include
 )
 
 target_link_libraries(${PROJECT_NAME}
@@ -39,4 +42,5 @@ target_link_libraries(${PROJECT_NAME}
     traceSystem
     crashHandler
     profiler
+    timeManager
 )
