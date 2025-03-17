@@ -39,6 +39,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/crashHandler/cmake_install.cmake")
   include("C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/profiler/cmake_install.cmake")
   include("C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/timeManager/cmake_install.cmake")
+  include("C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/glfw/cmake_install.cmake")
 
 endif()
 

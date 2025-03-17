@@ -75,21 +75,6 @@ bool Graphics::initialize( const int Width, const int Height ) {
 }
 
 void Graphics::update() {
-    glm::mat4 view = Camera::instance().getViewMatrix();
-
-    // TODO: setup shaders
-    for ( const auto& [key, value] :
-          ShaderManager::instance().getShaderList() ) {
-        glUseProgram( value );
-        glUniformMatrix4fv( glGetUniformLocation( value, "view" ), 1, GL_FALSE,
-                            &view[0][0] );
-        glUseProgram( 0 );
-    }
-
-    // Clear colour and depth buffers
-    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT |
-             GL_STENCIL_BUFFER_BIT );
-
     // Draw your scene here
     for ( auto& Func : RenderCallbacks ) {
         Func();

@@ -19,10 +19,6 @@ bool Engine::initialize() {
         return false;
     }
 
-    // if ( !Camera::instance().initialize( glm::vec3( 0.f, 0.f, 1600.f ) ) ) {
-    //     Trace::message( "Camera falied to initialize." );
-    // }
-
     // if ( !Editor::instance().initialize( Graphics::instance().getWindow() ) )
     // {
     //     Trace::message( "Editor failed to initialize." );
@@ -36,8 +32,6 @@ bool Engine::initialize() {
 }
 
 void Engine::update() {
-    // Profiler ProfilerInstance( 100000 );
-
     while ( IsRunning ) {
         Time->update();
 

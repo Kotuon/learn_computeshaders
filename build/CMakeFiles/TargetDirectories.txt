@@ -17,3 +17,8 @@ C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/profiler
 C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/timeManager/CMakeFiles/timeManager.dir
 C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/timeManager/CMakeFiles/INSTALL.dir
 C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/timeManager/CMakeFiles/ALL_BUILD.dir
+C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/glfw/CMakeFiles/INSTALL.dir
+C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/glfw/CMakeFiles/ALL_BUILD.dir
+C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/glfw/src/CMakeFiles/glfw.dir
+C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/glfw/src/CMakeFiles/update_mappings.dir
+C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/libraries/glfw/src/CMakeFiles/INSTALL.dir

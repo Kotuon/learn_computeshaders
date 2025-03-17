@@ -1,1 +1,5 @@
+C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\engine.cpp;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\cpp_template.dir\Debug\engine.obj
+C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\graphics.cpp;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\cpp_template.dir\Debug\graphics.obj
 C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\main.cpp;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\cpp_template.dir\Debug\main.obj
+C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\shader_manager.cpp;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\cpp_template.dir\Debug\shader_manager.obj
+C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\src\glad.c;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\cpp_template.dir\Debug\glad.obj

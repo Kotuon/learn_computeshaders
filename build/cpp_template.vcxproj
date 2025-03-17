@@ -87,7 +87,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glad/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glfw/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm/include" /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -106,10 +106,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -117,7 +117,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>libraries\fmt\Debug\fmtd.lib;libraries\traceSystem\Debug\traceSystem.lib;libraries\crashHandler\Debug\crashHandler.lib;libraries\profiler\Debug\profiler.lib;libraries\timeManager\Debug\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libraries\glfw\src\Debug\glfw3.lib;libraries\fmt\Debug\fmtd.lib;libraries\traceSystem\Debug\traceSystem.lib;libraries\crashHandler\Debug\crashHandler.lib;libraries\profiler\Debug\profiler.lib;libraries\timeManager\Debug\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -133,7 +133,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glad/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glfw/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm/include" /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
@@ -152,10 +152,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -163,7 +163,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>libraries\fmt\Release\fmt.lib;libraries\traceSystem\Release\traceSystem.lib;libraries\crashHandler\Release\crashHandler.lib;libraries\profiler\Release\profiler.lib;libraries\timeManager\Release\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libraries\glfw\src\Release\glfw3.lib;libraries\fmt\Release\fmt.lib;libraries\traceSystem\Release\traceSystem.lib;libraries\crashHandler\Release\crashHandler.lib;libraries\profiler\Release\profiler.lib;libraries\timeManager\Release\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -179,7 +179,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glad/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glfw/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm/include" /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
@@ -198,10 +198,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -209,7 +209,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>libraries\fmt\MinSizeRel\fmt.lib;libraries\traceSystem\MinSizeRel\traceSystem.lib;libraries\crashHandler\MinSizeRel\crashHandler.lib;libraries\profiler\MinSizeRel\profiler.lib;libraries\timeManager\MinSizeRel\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libraries\glfw\src\MinSizeRel\glfw3.lib;libraries\fmt\MinSizeRel\fmt.lib;libraries\traceSystem\MinSizeRel\traceSystem.lib;libraries\crashHandler\MinSizeRel\crashHandler.lib;libraries\profiler\MinSizeRel\profiler.lib;libraries\timeManager\MinSizeRel\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -225,7 +225,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /utf-8</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glad/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glfw/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm/include" /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -243,10 +243,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -254,7 +254,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>libraries\fmt\RelWithDebInfo\fmt.lib;libraries\traceSystem\RelWithDebInfo\traceSystem.lib;libraries\crashHandler\RelWithDebInfo\crashHandler.lib;libraries\profiler\RelWithDebInfo\profiler.lib;libraries\timeManager\RelWithDebInfo\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libraries\glfw\src\RelWithDebInfo\glfw3.lib;libraries\fmt\RelWithDebInfo\fmt.lib;libraries\traceSystem\RelWithDebInfo\traceSystem.lib;libraries\crashHandler\RelWithDebInfo\crashHandler.lib;libraries\profiler\RelWithDebInfo\profiler.lib;libraries\timeManager\RelWithDebInfo\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -326,7 +326,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\engine.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\graphics.cpp" />
     <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\main.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\shader_manager.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\src\glad.c" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\ZERO_CHECK.vcxproj">
@@ -342,6 +345,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\libraries\fmt\fmt.vcxproj">
       <Project>{48D94D4B-3679-3681-8C42-2F543DF2BFB4}</Project>
       <Name>fmt</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\libraries\glfw\src\glfw.vcxproj">
+      <Project>{7BCE2E30-2555-38D3-B551-054CA82EE3E4}</Project>
+      <Name>glfw</Name>
     </ProjectReference>
     <ProjectReference Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\libraries\profiler\profiler.vcxproj">
       <Project>{7D7BBAB8-7EA3-348E-9E72-C51404D79D5B}</Project>

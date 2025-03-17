@@ -13,12 +13,30 @@ else()
     endif()
 endif()
 
+#
+# GLFW options
+#
+option(GLFW_INSTALL OFF)
+option(GLFW_BUILD_DOCS OFF)
+option(GLFW_BUILD_EXAMPLES OFF)
+option(GLFW_BUILD_TESTS OFF)
+
+#
+# Libraries with CMake
+#
 add_subdirectory(libraries/fmt)
 add_subdirectory(libraries/traceSystem)
 add_subdirectory(libraries/crashHandler)
 add_subdirectory(libraries/profiler)
 add_subdirectory(libraries/timeManager)
+add_subdirectory(libraries/glfw)
 
+#
+# Source files
+#
+file(GLOB_RECURSE LIBRARY_SOURCES
+    libraries/glad/src/glad.c
+)
 file(GLOB_RECURSE PROJECT_SOURCES
     src/*.cpp
     src/*.cxx
@@ -26,7 +44,13 @@ file(GLOB_RECURSE PROJECT_SOURCES
     src/*.c
 )
 
-add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
+file(COPY assets/shaders DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE})
+file(COPY assets/models DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_BUILD_TYPE})
+
+file(COPY assets/shaders DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY assets/models DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+add_executable(${PROJECT_NAME} ${PROJECT_SOURCES} ${LIBRARY_SOURCES})
 
 include_directories(
     include/
@@ -35,9 +59,16 @@ include_directories(
     SYSTEM libraries/crashHandler/include
     SYSTEM libraries/profiler/include
     SYSTEM libraries/timeManager/include
+    SYSTEM libraries/glad/include
+    SYSTEM libraries/glfw/include
+    SYSTEM libraries/glm
+    SYSTEM libraries/glm/include
 )
 
 target_link_libraries(${PROJECT_NAME}
+    glfw
+    ${GLFW_LIBRARIES}
+    ${GLAD_LIBRARIES}
     fmt::fmt
     traceSystem
     crashHandler
