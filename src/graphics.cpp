@@ -1,5 +1,6 @@
 
 // std includes
+#include <ranges>
 
 // System headers
 #include <glad/glad.h>
@@ -15,7 +16,6 @@
 #include "graphics.hpp"
 #include "trace.hpp"
 #include "engine.hpp"
-// #include "editor.hpp"
 
 static const char* castToString( const unsigned char* Input ) {
     return reinterpret_cast< const char* >( Input );
@@ -39,14 +39,14 @@ bool Graphics::initialize( const int Width, const int Height ) {
 
     // Set additional Window options
     glfwWindowHint( GLFW_RESIZABLE, false );
-    glfwWindowHint( GLFW_SAMPLES, 4 ); // MSAA
+    // glfwWindowHint( GLFW_SAMPLES, 4 ); // MSAA
 
     // Create Window using GLFW
     Window = glfwCreateWindow( Width, Height, "", nullptr, nullptr );
 
     // Ensure the Window is set up correctly
     if ( !Window ) {
-        Trace::message( "Could not open GLFW Window." );
+        Trace::message( "Failed to create GLFW Window." );
 
         glfwTerminate();
         return false;
@@ -54,7 +54,12 @@ bool Graphics::initialize( const int Width, const int Height ) {
 
     // Let the Window be the current OpenGL context and initialise glad
     glfwMakeContextCurrent( Window );
-    gladLoadGL();
+    glfwSwapInterval( 0 );
+
+    if ( !gladLoadGLLoader( ( GLADloadproc )glfwGetProcAddress ) ) {
+        Trace::message( "Failed to initialize GLAD." );
+        return false;
+    }
 
     Trace::message( fmt::format( "{}: {}",
                                  castToString( glGetString( GL_VENDOR ) ),
@@ -76,7 +81,7 @@ bool Graphics::initialize( const int Width, const int Height ) {
 
 void Graphics::update() {
     // Draw your scene here
-    for ( auto& Func : RenderCallbacks ) {
+    for ( auto& Func : RenderCallbacks | std::views::reverse ) {
         Func();
     }
 

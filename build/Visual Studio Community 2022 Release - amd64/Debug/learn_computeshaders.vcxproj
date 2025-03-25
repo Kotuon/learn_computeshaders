@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{840E9F9E-647E-399A-B936-F158E7E86075}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>learn_computeshaders</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">learn_computeshaders.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">learn_computeshaders</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">learn_computeshaders.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">learn_computeshaders</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">learn_computeshaders.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">learn_computeshaders</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">learn_computeshaders.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">learn_computeshaders</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glad/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glfw/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/imgui" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/ImguiFileDialog" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\ImguiFileDialog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\ImguiFileDialog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libraries\glfw\src\Debug\glfw3.lib;libraries\fmt\Debug\fmtd.lib;libraries\traceSystem\Debug\traceSystem.lib;libraries\crashHandler\Debug\crashHandler.lib;libraries\profiler\Debug\profiler.lib;libraries\timeManager\Debug\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/Debug/learn_computeshaders.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/Debug/learn_computeshaders.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glad/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glfw/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/imgui" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/ImguiFileDialog" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\ImguiFileDialog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\ImguiFileDialog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libraries\glfw\src\Release\glfw3.lib;libraries\fmt\Release\fmt.lib;libraries\traceSystem\Release\traceSystem.lib;libraries\crashHandler\Release\crashHandler.lib;libraries\profiler\Release\profiler.lib;libraries\timeManager\Release\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/Release/learn_computeshaders.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/Release/learn_computeshaders.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glad/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glfw/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/imgui" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/ImguiFileDialog" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\ImguiFileDialog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\ImguiFileDialog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libraries\glfw\src\MinSizeRel\glfw3.lib;libraries\fmt\MinSizeRel\fmt.lib;libraries\traceSystem\MinSizeRel\traceSystem.lib;libraries\crashHandler\MinSizeRel\crashHandler.lib;libraries\profiler\MinSizeRel\profiler.lib;libraries\timeManager\MinSizeRel\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/MinSizeRel/learn_computeshaders.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/MinSizeRel/learn_computeshaders.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/fmt/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/traceSystem/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/crashHandler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/profiler/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/timeManager/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glad/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glfw/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/glm/include" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/imgui" /external:I "C:/Users/Kelson/Documents/Projects/learn_computeshaders/libraries/ImguiFileDialog" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\ImguiFileDialog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Kelson\Documents\Projects\learn_computeshaders\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\fmt\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\traceSystem\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\crashHandler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\profiler\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\timeManager\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glfw\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glm\include;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui;C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\ImguiFileDialog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>libraries\glfw\src\RelWithDebInfo\glfw3.lib;libraries\fmt\RelWithDebInfo\fmt.lib;libraries\traceSystem\RelWithDebInfo\traceSystem.lib;libraries\crashHandler\RelWithDebInfo\crashHandler.lib;libraries\profiler\RelWithDebInfo\profiler.lib;libraries\timeManager\RelWithDebInfo\timeManager.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/RelWithDebInfo/learn_computeshaders.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/RelWithDebInfo/learn_computeshaders.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Kelson/Documents/Projects/learn_computeshaders/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Kelson/Documents/Projects/learn_computeshaders "-BC:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug" --check-stamp-file "C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeCCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeRCCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Kelson/Documents/Projects/learn_computeshaders/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Kelson/Documents/Projects/learn_computeshaders "-BC:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug" --check-stamp-file "C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeCCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeRCCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Kelson/Documents/Projects/learn_computeshaders/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Kelson/Documents/Projects/learn_computeshaders "-BC:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug" --check-stamp-file "C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeCCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeRCCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Kelson/Documents/Projects/learn_computeshaders/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Kelson/Documents/Projects/learn_computeshaders "-BC:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug" --check-stamp-file "C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.28\Modules\Platform\WindowsPaths.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeCCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeRCCompiler.cmake;C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\3.28.0-rc3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\computetest.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\editor.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\engine.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\graphics.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\input.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\main.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\src\shader_manager.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\ImguiFileDialog\ImGuiFileDialog.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\glad\src\glad.c" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui\imgui.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui\imgui_demo.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui\imgui_draw.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui\imgui_tables.cpp" />
+    <ClCompile Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\libraries\imgui\imgui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\ZERO_CHECK.vcxproj">
+      <Project>{3021B953-8EEF-3038-8F2C-A5C73FD00931}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\libraries\crashHandler\crashHandler.vcxproj">
+      <Project>{90C9BE7C-3910-3FB8-B890-2302CF6C7D7E}</Project>
+      <Name>crashHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\libraries\fmt\fmt.vcxproj">
+      <Project>{3C94CE7D-3FAB-3AA1-AF97-55AB63261391}</Project>
+      <Name>fmt</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\libraries\glfw\src\glfw.vcxproj">
+      <Project>{7B567540-C245-38E0-BA6D-7FC855D8E8BB}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\libraries\profiler\profiler.vcxproj">
+      <Project>{363CF351-A222-329E-A65A-8EB375896451}</Project>
+      <Name>profiler</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\libraries\timeManager\timeManager.vcxproj">
+      <Project>{9C67882D-A7F2-35EE-A642-EB1AF2692D56}</Project>
+      <Name>timeManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\libraries\traceSystem\traceSystem.vcxproj">
+      <Project>{6B4A16C0-886C-325B-A865-8F52F6328A54}</Project>
+      <Name>traceSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

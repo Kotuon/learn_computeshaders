@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Kelson\Documents\Projects\learn_computeshaders\build\Visual Studio Community 2022 Release - amd64\Debug\CMakeFiles\58b84e8f3ed134d6b8e5a0f67092c55f\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{346617F6-E939-3BDF-ABCA-4C0A998B29FA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

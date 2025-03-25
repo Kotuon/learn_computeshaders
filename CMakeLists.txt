@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.5.0)
-project(cpp_template VERSION 0.1.0 LANGUAGES C CXX)
+cmake_path(GET CMAKE_CURRENT_SOURCE_DIR FILENAME ProjectName)
+project(${ProjectName} VERSION 0.1.0 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -36,6 +37,8 @@ add_subdirectory(libraries/glfw)
 #
 file(GLOB_RECURSE LIBRARY_SOURCES
     libraries/glad/src/glad.c
+    libraries/imgui/*.cpp
+    libraries/ImguiFileDialog/*.cpp
 )
 file(GLOB_RECURSE PROJECT_SOURCES
     src/*.cpp
@@ -63,6 +66,8 @@ include_directories(
     SYSTEM libraries/glfw/include
     SYSTEM libraries/glm
     SYSTEM libraries/glm/include
+    SYSTEM libraries/imgui
+    SYSTEM libraries/ImguiFileDialog
 )
 
 target_link_libraries(${PROJECT_NAME}
@@ -74,4 +79,5 @@ target_link_libraries(${PROJECT_NAME}
     crashHandler
     profiler
     timeManager
+    # ImguiFileDialog
 )

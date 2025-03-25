@@ -1,0 +1,10 @@
+^C:\USERS\KELSON\DOCUMENTS\PROJECTS\LEARN_COMPUTESHADERS\BUILD\VISUAL STUDIO COMMUNITY 2022 RELEASE - AMD64\DEBUG\CMAKEFILES\4563B8870BBEC8E3E4CAB70643D8FA6A\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Kelson/Documents/Projects/learn_computeshaders "-BC:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Kelson/Documents/Projects/learn_computeshaders/build/Visual Studio Community 2022 Release - amd64/Debug/learn_computeshaders.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

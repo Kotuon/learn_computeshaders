@@ -15,6 +15,7 @@ public:
     // Shader( const std::string& VertexFile, const std::string& FragmentFile );
 
     void use() const;
+    void deleteProgram();
 
     void setBool( const std::string& Name, const bool Value ) const;
     void setInt( const std::string& Name, const int Value ) const;
@@ -33,23 +34,24 @@ public:
     void setMat3( const std::string& Name, const glm::mat3& Value ) const;
     void setMat4( const std::string& Name, const glm::mat4& Value ) const;
 
+    unsigned getId() const;
+
 protected:
-    void checkCompileErrors( GLuint Shader, std::string Type );
+    const std::string readFile( const std::string& FileName );
+    void checkCompileErrors( GLuint Shader, std::string Type,
+                             std::string FileName = "" );
 
-    unsigned Id;
-};
-
-class ComputeShader : public ShaderBase {
-public:
-    ComputeShader( const char* ComputeFile );
-
-private:
     unsigned Id;
 };
 
 class Shader : public ShaderBase {
 public:
     Shader( const std::string& VertexFile, const std::string& FragmentFile );
+};
+
+class ComputeShader : public ShaderBase {
+public:
+    ComputeShader( const std::string& ComputeFile );
 };
 
 #endif

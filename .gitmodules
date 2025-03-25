@@ -23,3 +23,6 @@
 [submodule "libraries/glfw"]
 	path = libraries/glfw
 	url = https://github.com/glfw/glfw.git
+[submodule "libraries/imguiFileDialog"]
+	path = libraries/imguiFileDialog
+	url = https://github.com/aiekick/ImGuiFileDialog

@@ -7,6 +7,8 @@
 
 void ShaderBase::use() const { glUseProgram( Id ); }
 
+void ShaderBase::deleteProgram() { glDeleteProgram( Id ); }
+
 void ShaderBase::setBool( const std::string& Name, const bool Value ) const {
     glUniform1i( glGetUniformLocation( Id, Name.c_str() ), Value );
 }
@@ -58,124 +60,112 @@ void ShaderBase::setMat4( const std::string& Name,
                         &Value[0][0] );
 }
 
-void ShaderBase::checkCompileErrors( GLuint Shader, std::string Type ) {
-    GLint Success;
-    GLchar InfoLog[1024];
-    if ( Type != "PROGRAM" ) {
-        glGetShaderiv( Shader, GL_COMPILE_STATUS, &Success );
-        if ( !Success ) {
-            glGetShaderInfoLog( Shader, 1024, NULL, InfoLog );
+void ShaderBase::checkCompileErrors( GLuint Shader, std::string Type,
+                                     std::string FileName ) {
+    GLint Success = 0;
+    GLint LogSize = 0;
 
-            Trace::message( fmt::format(
-                "ERROR::Shader_COMPILATION_ERROR of Type: {}\n", Type ) );
-            Trace::message( fmt::format(
-                "{}\n -- "
-                "--------------------------------------------------- \n",
-                InfoLog ) );
+    if ( Type != "Program" ) {
+        glGetShaderiv( Shader, GL_COMPILE_STATUS, &Success );
+        if ( Success == GL_FALSE ) {
+            glGetShaderiv( Shader, GL_INFO_LOG_LENGTH, &LogSize );
+            GLchar* InfoLog = new GLchar[LogSize];
+            glGetShaderInfoLog( Shader, LogSize, &LogSize, InfoLog );
+            glDeleteShader( Shader );
+            Trace::message(
+                fmt::format( "{} Shader {}: {}\n", Type, FileName, InfoLog ) );
+            delete[] InfoLog;
         }
     } else {
         glGetProgramiv( Shader, GL_LINK_STATUS, &Success );
         if ( !Success ) {
+            glGetShaderiv( Shader, GL_INFO_LOG_LENGTH, &LogSize );
+            GLchar* InfoLog = new GLchar[LogSize];
             glGetProgramInfoLog( Shader, 1024, NULL, InfoLog );
 
-            Trace::message( fmt::format(
-                "ERROR::PROGRAM_LINKING_ERROR of Type: {}\n", Type ) );
-
-            Trace::message( fmt::format(
-                "{}\n -- --------------------------------------------------- "
-                "\n",
-                InfoLog ) );
+            Trace::message(
+                fmt::format( "{} Shader {}: {}\n", Type, FileName, InfoLog ) );
         }
     }
 }
 
+const std::string ShaderBase::readFile( const std::string& FileName ) {
+    std::string content;
+
+    std::ifstream file( FileName );
+    if ( !file.is_open() ) {
+        Trace::message( fmt::format( "Failed to open shader {}.", FileName ) );
+
+        return nullptr;
+    }
+
+    std::string line = "";
+    while ( !file.eof() ) {
+        getline( file, line );
+        content.append( line + "\n" );
+    }
+
+    file.close();
+
+    content.append( "\0" );
+
+    return content;
+}
+
+unsigned ShaderBase::getId() const { return Id; }
+
+#include <iostream>
+
 Shader::Shader( const std::string& VertexFile,
                 const std::string& FragmentFile ) {
-    const char* VertSource;
-    const char* FragSource;
+    const std::string VertSource = readFile( VertexFile ).c_str();
+    const std::string FragSource = readFile( FragmentFile ).c_str();
 
-    std::ifstream VFile;
-    std::ifstream FFile;
-
-    VFile.exceptions( std::ifstream::failbit | std::ifstream::badbit );
-    FFile.exceptions( std::ifstream::failbit | std::ifstream::badbit );
-
-    try {
-        VFile.open( VertexFile );
-        FFile.open( FragmentFile );
-
-        std::stringstream VStream, FStream;
-
-        VStream << VFile.rdbuf();
-        FStream << FFile.rdbuf();
-
-        VFile.close();
-        FFile.close();
-
-        VertSource = VStream.str().c_str();
-        FragSource = FStream.str().c_str();
-    } catch ( std::ifstream::failure& e ) {
-        Trace::message( fmt::format(
-            "ERROR::SHADER::FILE_NOT_SuccessFULLY_READ: {}\n", e.what() ) );
-    }
+    const char* VSource = VertSource.c_str();
+    const char* FSource = FragSource.c_str();
 
     unsigned Vertex, Fragment;
 
     // Create vertex shader
     Vertex = glCreateShader( GL_VERTEX_SHADER );
-    glShaderSource( Vertex, 1, &VertSource, nullptr );
+    glShaderSource( Vertex, 1, &VSource, nullptr );
     glCompileShader( Vertex );
-    checkCompileErrors( Vertex, "VERTEX" );
+    checkCompileErrors( Vertex, "Vertex", VertexFile );
 
     // Create fragment shader
     Fragment = glCreateShader( GL_FRAGMENT_SHADER );
-    glShaderSource( Fragment, 1, &FragSource, nullptr );
+    glShaderSource( Fragment, 1, &FSource, nullptr );
     glCompileShader( Fragment );
-    checkCompileErrors( Fragment, "FRAGMENT" );
+    checkCompileErrors( Fragment, "Fragment", FragmentFile );
 
     // Create program
     Id = glCreateProgram();
     glAttachShader( Id, Vertex );
     glAttachShader( Id, Fragment );
     glLinkProgram( Id );
-    checkCompileErrors( Id, "PROGRAM" );
+    checkCompileErrors( Id, "Program" );
 
     glDeleteShader( Vertex );
     glDeleteShader( Fragment );
 }
 
-ComputeShader::ComputeShader( const char* ComputeFile ) {
-    const char* ComputeSource;
-    std::ifstream CFile;
-
-    CFile.exceptions( std::ifstream::failbit | std::ifstream::badbit );
-
-    try {
-        CFile.open( ComputeFile );
-
-        std::stringstream CStream;
-
-        CStream << CFile.rdbuf();
-        CFile.close();
-        ComputeSource = CStream.str().c_str();
-    } catch ( std::ifstream::failure& e ) {
-        Trace::message( fmt::format(
-            "ERROR::SHADER::FILE_NOT_SuccessFULLY_READ: {}\n", e.what() ) );
-    }
+ComputeShader::ComputeShader( const std::string& ComputeFile ) {
+    const std::string ComputeSource = readFile( ComputeFile );
+    const char* CSource = ComputeSource.c_str();
 
     unsigned Compute;
 
     // Create compute shader
     Compute = glCreateShader( GL_COMPUTE_SHADER );
-    glShaderSource( Compute, 1, &ComputeSource, nullptr );
+    glShaderSource( Compute, 1, &CSource, nullptr );
     glCompileShader( Compute );
-    checkCompileErrors( Compute, "COMPUTE" );
+    checkCompileErrors( Compute, "Compute", ComputeFile );
 
     // Create program
     Id = glCreateProgram();
     glAttachShader( Id, Compute );
     glLinkProgram( Id );
-    checkCompileErrors( Id, "PROGRAM" );
+    checkCompileErrors( Id, "Program" );
 
     glDeleteShader( Compute );
 }

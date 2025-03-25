@@ -3,13 +3,19 @@
 #include <fmt/core.h>
 
 // Local headers
+#include "editor.hpp"
 #include "engine.hpp"
 #include "graphics.hpp"
+#include "input.hpp"
 #include "profiler.hpp"
 #include "trace.hpp"
 
-constexpr int WIDTH = 1920;
-constexpr int HEIGHT = 1080;
+#include "computetest.hpp"
+
+constexpr int WIDTH = 1000;
+constexpr int HEIGHT = 1000;
+
+static std::unique_ptr< CTest > test;
 
 Engine::Engine() {}
 
@@ -19,12 +25,18 @@ bool Engine::initialize() {
         return false;
     }
 
-    // if ( !Editor::instance().initialize( Graphics::instance().getWindow() ) )
-    // {
-    //     Trace::message( "Editor failed to initialize." );
-    // }
+    if ( !Editor::instance().initialize( Graphics::instance().getWindow() ) ) {
+        Trace::message( "Editor failed to initialize." );
+    }
+
+    test = std::make_unique< CTest >();
+
+    test->init();
 
     Time = std::make_unique< TimeManager >();
+
+    Graphics::instance().addRenderCallback(
+        std::bind( &CTest::render, test.get(), Time.get() ) );
 
     IsRunning = true;
 
@@ -41,7 +53,7 @@ void Engine::update() {
                                 .c_str() );
 
         // Non-fixed time step update calls
-        // Input::instance().update();
+        Input::instance().update();
 
         // Fixed time step update calls
         while ( Time->needsFixedUpdate() ) {
